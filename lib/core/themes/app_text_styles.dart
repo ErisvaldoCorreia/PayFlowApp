@@ -8,4 +8,14 @@ class TextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.headingGrey,
   );
+  static final buttonBoldGray = GoogleFonts.inter(
+    fontSize: 15,
+    fontWeight: FontWeight.w700,
+    color: AppColors.headingGrey,
+  );
+  static final buttonGray = GoogleFonts.inter(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    color: AppColors.headingGrey,
+  );
 }
