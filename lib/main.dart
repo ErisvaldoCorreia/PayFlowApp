@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pay_flow/core/themes/app_text_styles.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'Contador Aplicado em NLW',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyles.titleHome,
             ),
             Text(
               '$_counter',
