@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pay_flow/core/images/app_images.dart';
 
 class SplashPage extends StatelessWidget {
-  //const SplashPage({Key? key}) : super(key: key);
+  const SplashPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

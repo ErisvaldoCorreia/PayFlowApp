@@ -5,7 +5,7 @@ import 'package:pay_flow/core/themes/app_colors.dart';
 import 'package:pay_flow/core/themes/app_text_styles.dart';
 
 class LoginPage extends StatefulWidget {
-  //LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
               color: AppColors.primary,
             ),
             Positioned(
-              top: 60,
+              top: size.height * 0.06,
               left: 0,
               right: 0,
               child: Image.asset(
@@ -41,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
             Positioned(
               left: 0,
               right: 0,
-              bottom: size.height * .10,
+              bottom: size.height * 0.07,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,6 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding: EdgeInsets.only(left: 40.0, right: 40.0),
                     child: SocialLoginButton(
+                      buttonTitle: 'Login com Google',
                       onTap: () {},
                     ),
                   ),
