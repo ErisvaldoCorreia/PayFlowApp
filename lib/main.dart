@@ -1,24 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:pay_flow/core/themes/app_colors.dart';
-import 'package:pay_flow/modules/Login/login_page.dart';
-import 'package:pay_flow/modules/SplashPage/splash_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+import 'app_widget.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(AppFirebase());
 }
 
-class MyApp extends StatelessWidget {
+class AppFirebase extends StatefulWidget {
+  @override
+  _AppFirebaseState createState() => _AppFirebaseState();
+}
+
+class _AppFirebaseState extends State<AppFirebase> {
+  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'PayFlow',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: AppColors.primary,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      //home: SplashPage(),
-      home: LoginPage(),
+    return FutureBuilder(
+      future: _initialization,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          return MyApp();
+        } else if (snapshot.hasError) {
+          return Material(
+            child: Center(
+              child: Text(
+                "Não foi possível inicializar o Firebase",
+                textDirection: TextDirection.ltr,
+              ),
+            ),
+          );
+        } else {
+          return Material(
+            child: Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
+        }
+      },
     );
   }
 }
