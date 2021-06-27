@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                 )),
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacementNamed(context, '/login');
+                Navigator.pushNamed(context, '/barcode');
               },
               child: Container(
                 width: 56,
