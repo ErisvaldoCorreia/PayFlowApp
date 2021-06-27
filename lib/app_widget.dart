@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'PayFlow',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primarySwatch: Colors.orange,
         primaryColor: AppColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
