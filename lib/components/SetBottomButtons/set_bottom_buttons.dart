@@ -7,12 +7,16 @@ class SetBottomButtons extends StatelessWidget {
   final String secondaryTitle;
   final VoidCallback primaryOnPressed;
   final VoidCallback secondaryOnPressed;
+  final bool primaryColorPrimary;
+  final bool secondaryColorPrimary;
   const SetBottomButtons({
     Key? key,
     required this.primaryTitle,
     required this.secondaryTitle,
     required this.primaryOnPressed,
     required this.secondaryOnPressed,
+    this.primaryColorPrimary = false,
+    this.secondaryColorPrimary = false,
   }) : super(key: key);
 
   @override
@@ -24,6 +28,7 @@ class SetBottomButtons extends StatelessWidget {
               child: LabelButton(
             title: primaryTitle,
             onPressed: primaryOnPressed,
+            enableColorPrimary: primaryColorPrimary,
           )),
           VerticalDivider(
             color: AppColors.stroke,
@@ -32,6 +37,7 @@ class SetBottomButtons extends StatelessWidget {
             child: LabelButton(
               title: secondaryTitle,
               onPressed: secondaryOnPressed,
+              enableColorPrimary: secondaryColorPrimary,
             ),
           )
         ],
