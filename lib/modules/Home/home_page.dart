@@ -63,8 +63,6 @@ class _HomePageState extends State<HomePage> {
             IconButton(
                 onPressed: () {
                   controller.setPage(0);
-                  //Temporario para sair da tela home
-                  Navigator.pushReplacementNamed(context, '/login');
                   setState(() {});
                 },
                 icon: Icon(

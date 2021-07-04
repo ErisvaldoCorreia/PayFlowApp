@@ -61,9 +61,12 @@ class BottomSheetWidget extends StatelessWidget {
                     height: 1,
                   ),
                   SetBottomButtons(
-                    primaryTitle: primaryTitle,
+                    //Left Buttom
                     primaryColorPrimary: true,
+                    primaryTitle: primaryTitle,
                     primaryOnPressed: primaryOnPressed,
+
+                    //Right Buttom
                     secondaryTitle: secondaryTitle,
                     secondaryOnPressed: secondaryOnPressed,
                   ),

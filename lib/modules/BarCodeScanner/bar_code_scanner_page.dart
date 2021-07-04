@@ -56,9 +56,12 @@ class _BarCodeScannerPageState extends State<BarCodeScannerPage> {
           bottomNavigationBar: Container(
             height: 56,
             child: SetBottomButtons(
+              //Left Buttom
+              primaryColorPrimary: true,
               primaryTitle: "Digite o código",
               primaryOnPressed: () {},
-              primaryColorPrimary: true,
+
+              //Right Buttom
               secondaryTitle: 'Abrir da Galeria',
               secondaryOnPressed: () {},
             ),
